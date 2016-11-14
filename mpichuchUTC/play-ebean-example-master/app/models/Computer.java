@@ -33,12 +33,16 @@ public class Computer extends Model {
 	@ManyToOne
 	public Company company;
 
+	@ManyToOne
+	public Procesador  procesador;
+
 	/**
 	 * Generic query helper for entity Computer with id Long
 	 */
 	public static Find<Long, Computer> find = new Find<Long, Computer>() {
 	};
-
+	public static Find<Long, Procesador> find1 = new Find<Long, Procesador>() {
+	};
 	/**
 	 * Return a paged list of computer
 	 *
@@ -60,8 +64,11 @@ public class Computer extends Model {
 				.orderBy(sortBy + " " + order).fetch("company")
 				.findPagedList(page, pageSize);
 
+		
+
 	}
-	
+
+
 	public Long getId() {
 		return id;
 	}
@@ -69,6 +76,7 @@ public class Computer extends Model {
 	public void setId(Long id) {
 		this.id = id;
 	}
+	
 
 
 }

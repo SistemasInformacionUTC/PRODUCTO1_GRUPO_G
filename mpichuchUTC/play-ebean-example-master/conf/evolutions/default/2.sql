@@ -619,6 +619,8 @@ insert into computer (id,name,introduced,discontinued,company_id) values (571,'L
 insert into computer (id,name,introduced,discontinued,company_id) values (572,'Dell Vostro',null,null,null);
 insert into computer (id,name,introduced,discontinued,company_id) values (573,'Gateway LT3103U','2008-01-01',null,null);
 insert into computer (id,name,introduced,discontinued,company_id) values (574,'iPhone 4S','2011-10-14',null,1);
+insert into procesador (id,marca,capacidad,peso) values (2,'inter COREI3',200,10);
+insert into procesador (id,marca,capacidad,peso) values (3,'AMD',100,20);
 
 # --- !Downs
 
