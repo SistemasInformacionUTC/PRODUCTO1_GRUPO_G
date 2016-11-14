@@ -38,6 +38,10 @@ public class Computer extends Model {
 	 */
 	public static Find<Long, Computer> find = new Find<Long, Computer>() {
 	};
+	
+	public static Find<Long, discoduro> find1 = new Find<Long, discoduro>(){
+		
+	};
 
 	/**
 	 * Return a paged list of computer
