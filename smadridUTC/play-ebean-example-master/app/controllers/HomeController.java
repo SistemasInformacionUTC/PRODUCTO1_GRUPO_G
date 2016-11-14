@@ -108,6 +108,10 @@ public class HomeController extends Controller {
 		Form<Computer> computerForm = formFactory.form(Computer.class);
 		return ok(views.html.createForm.render(computerForm));
 	}
+	
+	
+	
+
 
 	/**
 	 * Handle the 'new computer form' submission
