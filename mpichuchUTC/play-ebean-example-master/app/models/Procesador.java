@@ -22,15 +22,14 @@ public class Procesador extends com.avaje.ebean.Model {
     public int  capacidad ;
     public int  peso ; 
     
-    public static Find<Long,Procesador> find = new Find<Long,Procesador>(){};
-
-    public static Map<String,String> options() {
-        LinkedHashMap<String,String> options = new LinkedHashMap<String,String>();
-        for(Procesador c: Procesador.find.orderBy("marca").findList()) {
-            options.put(c.id.toString(), c.marca);
-        }
-        return options;
-    }
     
+    public long calculartotal(){
+    	
+    	if(capacidad>peso)
+    		return ((capacidad-peso)*peso);
+    	else 
+    	return ((peso-capacidad)*capacidad);
+    	
+    }
 
 }

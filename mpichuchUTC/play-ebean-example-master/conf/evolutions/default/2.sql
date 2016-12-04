@@ -45,7 +45,7 @@ insert into company (id,name) values ( 41,'HTC Corporation');
 insert into company (id,name) values ( 42,'Research In Motion');
 insert into company (id,name) values ( 43,'Samsung Electronics');
 
-insert into computer (id,name,introduced,discontinued,company_id) values (  1,'MacBook Pro 15.4 inch',null,null,1);
+insert into computer (id,name,introduced,discontinued,company_id,  procesador_id ) values (  1,'MacBook Pro 15.4 inch',null,null,1,2);
 insert into computer (id,name,introduced,discontinued,company_id) values (  2,'CM-2a',null,null,2);
 insert into computer (id,name,introduced,discontinued,company_id) values (  3,'CM-200',null,null,2);
 insert into computer (id,name,introduced,discontinued,company_id) values (  4,'CM-5e',null,null,2);
@@ -626,3 +626,4 @@ insert into procesador (id,marca,capacidad,peso) values (3,'AMD',100,20);
 
 delete from computer;
 delete from company;
+delete from procesador;

@@ -67,10 +67,16 @@
         <table class="computers zebra-striped">
             <thead>
                 <tr>
+                <!-- en esta parate pordemos modificar la cabesera de la vista pra poder observar los datos  -->
                     @header("name", "Computer name")
                     @header("introduced", "Introduced")
                     @header("discontinued", "Discontinued")
-                    @header("company.name", "Company")
+                    @header("company.name", "Companyyyy")
+                    @header("procesador.marca", "procesador")
+                      @header("procesador.capacidad", "capacidad")
+                        @header("procesador.peso", "peso")
+                          @header("procesador.calculo", "calculo")
+                      
                 </tr>
             </thead>
             <tbody>
@@ -97,6 +103,35 @@
                                 <em>-</em>
                             } else {
                                 @computer.company.name
+                            }
+                        </td>
+                        <!-- en esta parte sacamos datos desde la base de datos a la vista -->
+                           <td>
+                            @if(computer.procesador == null) {
+                                <em>-</em>
+                            } else {
+                                @computer.procesador.marca
+                            }
+                        </td>
+                                 <td>
+                            @if(computer.procesador == null) {
+                                <em>-</em>
+                            } else {
+                                @computer.procesador.capacidad
+                            }
+                        </td>
+                                        <td>
+                            @if(computer.procesador == null) {
+                                <em>-</em>
+                            } else {
+                                @computer.procesador.peso
+                            }
+                        </td>
+                                            <td>
+                            @if(computer.procesador == null) {
+                                <em>-</em>
+                            } else {
+                                @computer.procesador.calculartotal()
                             }
                         </td>
                     </tr>
